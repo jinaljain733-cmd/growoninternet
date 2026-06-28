@@ -37,11 +37,11 @@ The portfolio website of **Jinal Jain**, a Mumbai-based Frontend Developer & SEO
 - Contact form with validation — required fields + email format check
 - **WhatsApp integration** — the form submits straight to a WhatsApp chat (no backend, no email)
 - Custom on-brand **404 page** with quick links back
-- **Structured data (JSON-LD)** — Person, WebSite, FAQPage & ProfessionalService schema
+- **Structured data (JSON-LD)** — Person, WebSite, ProfessionalService & FAQPage schema
 - SEO optimised — meta tags, Open Graph, Twitter cards, `sitemap.xml`, `robots.txt`
 - **WebP images with JPG fallback** via `<picture>` — 40–60% lighter
 - Lazy-loaded images with width/height set (zero layout shift)
-- Favicon set — `.ico`, 32×32, 192×192, Apple touch icon (all from the brand "J" mark)
+- Favicon set — `.ico`, 32×32, 192×192, Apple touch icon (all from the brand "G" mark)
 - Custom 1200×630 **Open Graph card** for rich link previews
 - Accessibility — skip link, ARIA roles, focus-visible states, `prefers-reduced-motion`
 - Deployed on **Netlify** with custom domain `growoninternet.com`
@@ -58,7 +58,7 @@ The portfolio website of **Jinal Jain**, a Mumbai-based Frontend Developer & SEO
 | HTML5 | Semantic structure, SEO meta tags, Open Graph, JSON-LD |
 | CSS3 | Variables, Grid, Flexbox, animations, scroll reveal, reduced-motion |
 | JavaScript (ES6+) | Navbar, carousel, tabs, FAQ, form validation, WhatsApp |
-| Google Fonts | Fraunces (serif display) + DM Sans |
+| Google Fonts | Bricolage Grotesque (display) + Hanken Grotesk (body) + JetBrains Mono (mono accents) |
 | Netlify | Hosting, custom domain, redirects, security headers, caching |
 | `netlify.toml` | Header rules, CSP, cache config |
 
@@ -79,7 +79,7 @@ The portfolio website of **Jinal Jain**, a Mumbai-based Frontend Developer & SEO
 
 ## 🔍 SEO & Performance
 
-- **JSON-LD structured data** — Person, WebSite, FAQPage, ProfessionalService (linked `@graph`)
+- **JSON-LD structured data** — Person, WebSite, ProfessionalService, FAQPage (cross-linked via `@id`)
 - `sitemap.xml` — ready to submit to Google Search Console
 - `robots.txt` — allows all crawlers, points to the sitemap
 - Open Graph + Twitter Card meta — rich previews on WhatsApp, LinkedIn & X
@@ -99,10 +99,13 @@ X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 Referrer-Policy: strict-origin-when-cross-origin
 Permissions-Policy: geolocation=(), microphone=(), camera=()
-Content-Security-Policy: default-src 'self'; object-src 'none'; img-src 'self' data:;
+Content-Security-Policy: default-src 'self'; object-src 'none';
+  img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com;
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';
-  connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'
+  font-src 'self' https://fonts.gstatic.com;
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+  connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com;
+  form-action 'self'; base-uri 'self'; frame-ancestors 'self'
 ```
 
 ---
