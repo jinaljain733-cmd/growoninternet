@@ -55,3 +55,17 @@ function startAuto(){stopAuto();autoTimer=setInterval(()=>{if(document.visibilit
 function stopAuto(){if(autoTimer){clearInterval(autoTimer);autoTimer=null;}}
 function pauseThenResume(d){stopAuto();clearTimeout(resumeTimer);resumeTimer=setTimeout(startAuto,d);}
 if(scroll&&!isTouch&&!reduce){scroll.addEventListener("mouseenter",stopAuto);scroll.addEventListener("mouseleave",()=>pauseThenResume(800));scroll.addEventListener("wheel",()=>pauseThenResume(4000),{passive:true});scroll.addEventListener("scroll",()=>{if(!autoScrolling&&autoTimer)pauseThenResume(4000);},{passive:true});startAuto();}
+// Email reveal — builds mailto links from data attributes so plain-text
+// addresses aren't sitting in the raw HTML for scrapers to harvest.
+function revealEmail(linkId, textId){
+  const link=document.getElementById(linkId);
+  if(!link)return;
+  const user=link.getAttribute('data-user'), domain=link.getAttribute('data-domain');
+  const email=user+'@'+domain;
+  link.href='mailto:'+email;
+  link.removeAttribute('data-user');link.removeAttribute('data-domain');
+  const textEl=textId?document.getElementById(textId):null;
+  if(textEl)textEl.textContent=email;
+}
+revealEmail('emailLink','emailText');
+revealEmail('emailLinkFooter','emailTextFooter');

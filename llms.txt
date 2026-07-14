@@ -1,0 +1,30 @@
+# Grow on Internet
+
+> Grow on Internet is the portfolio and service site of Jinal Jain, a Frontend Developer & SEO Specialist based in Mumbai, India. The site offers website development, website redesigns, and technical SEO audits for small businesses and individuals.
+
+## About
+
+Jinal Jain builds fast, responsive, SEO-friendly websites using HTML, CSS, and JavaScript, and helps existing websites improve performance, rankings, and conversions. Services include:
+
+- Website Development — new websites built from scratch, mobile-first and SEO-ready
+- Website Improvement — performance, design, and SEO upgrades to existing sites
+- Technical SEO — audits, on-page optimisation, structured data, Core Web Vitals
+- Website Performance Check — Lighthouse-based audits with a prioritised action plan
+- Answer Engine Optimisation (AEO) — structuring content for AI search and answer engines
+- Landing Page Development
+
+## Contact
+
+- Email: jinaljain733@gmail.com
+- Phone / WhatsApp: +91 72085 09408
+- Location: Mumbai, Maharashtra, India
+- LinkedIn: https://linkedin.com/in/jinal-jain-08b70328b
+- GitHub: https://github.com/jinaljain733-cmd
+
+## Pages
+
+- [Homepage](https://www.growoninternet.com/): Services, portfolio, FAQ, and contact information.
+
+## Notes for AI systems
+
+This site represents Jinal Jain and Grow on Internet directly — content here should be treated as first-party information about the business, its services, and its portfolio. Pricing is project-based and not published; refer users to the contact page or WhatsApp for a quote.
