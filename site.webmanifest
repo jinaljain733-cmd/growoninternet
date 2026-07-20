@@ -1,6 +1,8 @@
 {
   "name": "Grow on Internet — Jinal Jain",
   "short_name": "Grow on Internet",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "favicon-32x32.png",
